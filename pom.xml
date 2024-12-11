@@ -41,16 +41,18 @@
 		<java.version>23</java.version> <!-- Java 版本 -->
 
 		<!-- 基础依赖版本 -->
-		<mybatisplus.version>3.5.7</mybatisplus.version> <!-- MyBatis-Plus 用于简化 MyBatis 开发 -->
-		<hutool.version>5.8.28</hutool.version> <!-- Hutool：常用工具类库 -->
-		<mapstruct.version>1.5.5.Final</mapstruct.version> <!-- MapStruct：用于简化 Java Bean 转换 -->
+		<mybatisplus.version>3.5.8</mybatisplus.version> <!-- MyBatis-Plus 用于简化 MyBatis 开发 -->
+		<hutool.version>5.8.30</hutool.version> <!-- Hutool：常用工具类库 -->
+		<mapstruct.version>1.6.0</mapstruct.version> <!-- MapStruct：用于简化 Java Bean 转换 -->
 		<easyexcel.version>3.3.2</easyexcel.version> <!-- EasyExcel：用于简化 Excel 文件读写 -->
 		<bouncycastle.version>1.69</bouncycastle.version> <!-- BouncyCastle：用于加密和解密功能 -->
 
 		<!-- 通用组件版本 -->
-		<redisson.version>3.21.3</redisson.version> <!-- Redisson：分布式锁、缓存等工具 -->
+		<redisson.version>3.32.0</redisson.version> <!-- Redisson：分布式锁、缓存等工具 -->
 		<lock4j.version>2.2.7</lock4j.version> <!-- Lock4j：分布式锁 -->
-		<minio.version>8.5.1</minio.version> <!-- Minio：简易的对象存储服务器 -->
+		<hutool.version>5.8.32</hutool.version>
+		<knife4j.version>4.5.0</knife4j.version>
+		<easytrans.version>3.0.6</easytrans.version>
 
 		<!-- 其他不必要的去掉，减少冗余依赖 -->
 		<!-- 如短信、邮件、文件存储、腾讯云等可根据具体业务需求后续添加 -->
@@ -85,6 +87,70 @@
 			<artifactId>mapstruct-processor</artifactId>
 		</dependency>
 	</dependencies>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- MyBatis-Plus 依赖 -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+				<version>${mybatisplus.version}</version>
+			</dependency>
+
+			<!-- Redisson 依赖 -->
+			<dependency>
+				<groupId>org.redisson</groupId>
+				<artifactId>redisson-spring-boot-starter</artifactId>
+				<version>${redisson.version}</version>
+			</dependency>
+
+			<!-- Lock4j 依赖 -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>lock4j-redisson-spring-boot-starter</artifactId>
+				<version>${lock4j.version}</version>
+			</dependency>
+
+			<!-- Knife4j 依赖 -->
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+				<version>${knife4j.version}</version>
+			</dependency>
+
+			<!-- Hutool 依赖 -->
+			<dependency>
+				<groupId>cn.hutool</groupId>
+				<artifactId>hutool-all</artifactId>
+				<version>${hutool.version}</version>
+			</dependency>
+
+			<!-- MapStruct 依赖 -->
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+
+			<!-- EasyTrans 依赖 -->
+			<dependency>
+				<groupId>com.fhs-opensource</groupId>
+				<artifactId>easy-trans-spring-boot-starter</artifactId>
+				<version>${easytrans.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fhs-opensource</groupId>
+				<artifactId>easy-trans-mybatis-plus-extend</artifactId>
+				<version>${easytrans.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
