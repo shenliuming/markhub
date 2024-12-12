@@ -44,6 +44,7 @@
 
 		<!-- 基础依赖版本 -->
 		<mybatisplus.version>3.5.5</mybatisplus.version> <!-- MyBatis-Plus 用于简化 MyBatis 开发 -->
+		<mybatisplusjoin.version>1.4.13</mybatisplusjoin.version> <!-- MyBatis-Plus-Join 用于简化 MyBatis 连表查询开发 -->
 		<hutool.version>5.8.30</hutool.version> <!-- Hutool：常用工具类库 -->
 		<mapstruct.version>1.6.0</mapstruct.version> <!-- MapStruct：用于简化 Java Bean 转换 -->
 		<easyexcel.version>3.3.2</easyexcel.version> <!-- EasyExcel：用于简化 Excel 文件读写 -->
@@ -98,6 +99,11 @@
 				<groupId>com.baomidou</groupId>
 				<artifactId>mybatis-plus-spring-boot3-starter</artifactId>
 				<version>${mybatisplus.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.yulichang</groupId>
+				<artifactId>mybatis-plus-join-boot-starter</artifactId>
+				<version>${mybatisplusjoin.version}</version>
 			</dependency>
 
 			<!-- Redisson 依赖 -->

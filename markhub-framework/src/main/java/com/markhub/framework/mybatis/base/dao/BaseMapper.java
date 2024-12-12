@@ -1,6 +1,6 @@
 package com.markhub.framework.mybatis.base.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.github.yulichang.base.MPJBaseMapper;
 
 /**
  *
@@ -10,6 +10,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @Description: 规范顶层基础DAO接口。
  *  <p>提供基础的数据库操作接口，用于通用的数据访问层逻辑。</p>
  */
-public interface BaseDao<T> extends BaseMapper<T> {
+public interface BaseMapper<T> extends MPJBaseMapper<T> {
 
 }

@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.markhub.framework.mybatis.base.service.BaseService;
 
 /**
+ * @param <T> 实体类类型
+ * @param <M> Mapper类型
  * @Auther: emp
  * @Date: 2024/12/12 15:48
  * @Description: 规范顶层基础服务实现类。

@@ -2,8 +2,10 @@ package com.markhub.framework.mybatis.base.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fhs.core.trans.vo.TransPojo;
 import lombok.Data;
+import org.apache.ibatis.type.JdbcType;
 
 import java.time.LocalDateTime;
 
@@ -11,22 +13,17 @@ import java.time.LocalDateTime;
 /**
  * @Auther: emp
  * @Date: 2024/12/12 15:06
- * @Description: 基类实体，提供通用字段和方法
+ * @Description: 基类实体，提供通用字段和方法 DO (Data Object)
  */
 @Data
+@JsonIgnoreProperties(value = "transMap")
 public abstract class BaseEntity extends Model<BaseEntity> implements TransPojo {
 
     /**
-     * 主键ID.
+     * 创建者ID. 使用 String 类型的原因是，未来可能会存在非数值的情况，留好拓展性。适应变化能力很重要
      */
-    @TableId
-    private Long id;
-
-    /**
-     * 创建者ID.
-     */
-    @TableField(fill = FieldFill.INSERT)
-    private Long creator;
+    @TableField(fill = FieldFill.INSERT, jdbcType = JdbcType.VARCHAR)
+    private String creator;
 
     /**
      * 创建时间.
@@ -35,10 +32,10 @@ public abstract class BaseEntity extends Model<BaseEntity> implements TransPojo 
     private LocalDateTime createTime;
 
     /**
-     * 更新者ID.
+     * 更新者ID. 使用 String 类型的原因是，未来可能会存在非数值的情况，留好拓展性。适应变化能力很重要
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Long updater;
+    @TableField(fill = FieldFill.INSERT_UPDATE, jdbcType = JdbcType.VARCHAR)
+    private String updater;
 
     /**
      * 更新时间.

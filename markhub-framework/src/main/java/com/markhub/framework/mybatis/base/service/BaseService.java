@@ -3,6 +3,7 @@ package com.markhub.framework.mybatis.base.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
+ * @param <T> 实体类类型
  * @Auther: emp
  * @Date: 2024/12/12 15:42
  * @Description: 规范顶层基础服务接口。
