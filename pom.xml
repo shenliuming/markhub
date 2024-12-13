@@ -60,7 +60,7 @@
 		<!-- 其他不必要的去掉，减少冗余依赖 -->
 		<!-- 如短信、邮件、文件存储、腾讯云等可根据具体业务需求后续添加 -->
 
-
+		<bouncycastle.version>1.69</bouncycastle.version>
 
 	</properties>
 
@@ -156,6 +156,12 @@
 				<groupId>com.fhs-opensource</groupId>
 				<artifactId>easy-trans-mybatis-plus-extend</artifactId>
 				<version>${easytrans.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15to18</artifactId>
+				<version>${bouncycastle.version}</version> <!-- 根据需要调整版本 SM3 是中国国家密码管理局发布的一种安全散列算法 它的安全性类似于国际上广泛使用的 SHA-256。-->
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
