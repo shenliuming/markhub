@@ -10,7 +10,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum DataScope {
+public enum DataScopeLevel {
 
     ALL(1), // 全部数据权限
 

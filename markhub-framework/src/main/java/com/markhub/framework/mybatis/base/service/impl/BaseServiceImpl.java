@@ -1,7 +1,14 @@
 package com.markhub.framework.mybatis.base.service.impl;
 
+import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.metadata.OrderItem;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.markhub.framework.mybatis.annotation.DataScope;
+import com.markhub.framework.mybatis.base.query.BaseQuery;
 import com.markhub.framework.mybatis.base.service.BaseService;
 
 /**
@@ -15,4 +22,35 @@ import com.markhub.framework.mybatis.base.service.BaseService;
  */
 public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T> implements BaseService<T> {
 
+    /**
+     * 分页查询（带数据权限控制）
+     *
+     * @param query 分页参数
+     * @param queryWrapper 查询条件
+     * @return 分页结果
+     */
+    @DataScope(tableAlias = "t", orgIdAlias = "org_id")
+    public IPage<T> queryPage(BaseQuery query, LambdaQueryWrapper<T> queryWrapper) {
+        IPage<T> page = getPage(query);
+        return this.page(page, queryWrapper); // 数据权限逻辑通过注解自动处理
+    }
+
+    /**
+     * 获取分页对象
+     *
+     * @param query 分页参数
+     */
+    protected IPage<T> getPage(BaseQuery query) {
+        Page<T> page = new Page<>(query.getPageNo(), query.getPageSize());
+
+        if (StrUtil.isNotBlank(query.getSortBy())) {
+            if (query.isAsc()) {
+                return page.addOrder(OrderItem.asc(query.getSortBy()));
+            } else {
+                return page.addOrder(OrderItem.desc(query.getSortBy()));
+            }
+        }
+
+        return page;
+    }
 }

@@ -1,5 +1,6 @@
 package com.markhub.framework.util;
 
+import com.markhub.framework.security.auth.AuthUser;
 import jakarta.servlet.http.HttpServletRequest;
 
 /**
@@ -21,4 +22,7 @@ public class FrameworkUtils {
         return 0L;
     }
 
+    public static AuthUser getLoginUser() {
+        return new AuthUser();
+    }
 }
