@@ -83,7 +83,7 @@ public class AuthUser implements UserDetails, Serializable {
      * 是否为超级管理员
      * 0: 否，1: 是，表示用户是否具有超级管理员权限
      */
-    private Integer isSuperAdmin = 0;
+    private Integer isSuperAdmin;
 
     /**
      * 用户账户的创建时间
