@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.Range;
 /**
  * @Auther: emp
  * @Date: 2024/12/17 22:07
- * @Description:
+ * @Description: 基础分页
  */
 @Data
 public class BaseQuery {

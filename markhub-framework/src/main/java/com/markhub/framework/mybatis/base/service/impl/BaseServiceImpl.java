@@ -29,7 +29,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
      * @param queryWrapper 查询条件
      * @return 分页结果
      */
-    @DataScope(tableAlias = "t", orgIdAlias = "org_id")
+    @DataScope(orgIdAlias = "org_id")
     public IPage<T> queryPage(BaseQuery query, LambdaQueryWrapper<T> queryWrapper) {
         IPage<T> page = getPage(query);
         return this.page(page, queryWrapper); // 数据权限逻辑通过注解自动处理
