@@ -67,9 +67,9 @@ public class DataScopeAspect {
         sqlFilter.append(" (");
         // 用户的数据访问范围
         List<Long> dataScopeList = user.getUserDataAccessScope();
-        if (dataScopeList == null) {
-            return "1=0"; // 无权限访问
-        }
+//        if (dataScopeList == null) {
+//            return "1=0"; // 无权限访问
+//        }
         // 机构的过滤
         if (dataScopeList.size() > 0) {
             sqlFilter.append(tableAlias).append(orgIdAlias);

@@ -14,7 +14,6 @@ import java.util.Objects;
  * @Date: 2024/12/12 17:34
  * @Description: 通用字段自动填充处理器
  */
-@Component
 public class UniversalMetaObjectHandler implements MetaObjectHandler {
 
     @Override
