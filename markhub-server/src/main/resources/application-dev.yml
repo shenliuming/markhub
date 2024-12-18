@@ -2,9 +2,9 @@ spring:
   data:
     redis:
       database: 1
-      host: localhost
+      host: 8.134.48.80
       port: 6379
-      #password:
+      password: satan@redis
       #timeout: 6000ms  # 连接超时时长（毫秒）
   datasource:
     dynamic:
@@ -18,21 +18,17 @@ spring:
       primary: master
       datasource:
         master:
-          # MySQL8
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://localhost:3306/be-water_boot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
-          username: be-water
-          password: 123456
-          # 达梦
-          #    driver-class-name: dm.jdbc.driver.DmDriver
-          #    url: jdbc:dm://192.168.3.19:5236/be-water_boot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
-          #    username: be-water_boot
-          #    password: 12345678
-          # PostgreSQL
-          #    driver-class-name: org.postgresql.Driver
-          #    url: jdbc:postgresql://192.168.3.19:5432/postgres
-          #    username: postgres
-          #    password: 123456
+          url: jdbc:mysql://satan:3306/be-water?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+          username: root
+          password: satan@mysql
+
+
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
 wx:
   mp:
     useRedis: false
@@ -40,9 +36,8 @@ wx:
       host: satan
       port: 6379
       password: satan@redis
-      timeout: 2000
     configs:
-      - appId: wxac4aff5e8fd034f6 # 测试号
-        secret: da1e528b223f6cfbfb523f4cd1a448f4
-        token:
-        aesKey:
+      - appId: wxac4aff5e8fd034f6 # 第一个公众号的appid
+        secret: da1e528b223f6cfbfb523f4cd1a448f4 # 公众号的appsecret
+        token:   # 接口配置里的Token值
+        aesKey:   # 接口配置里的EncodingAESKey值

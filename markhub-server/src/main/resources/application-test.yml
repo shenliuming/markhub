@@ -37,7 +37,7 @@ wx:
   mp:
     useRedis: false
     redisConfig:
-      host: 8.134.48.80
+      host: satan
       port: 6379
       password: satan@redis
       timeout: 2000
