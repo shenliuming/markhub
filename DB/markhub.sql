@@ -43,7 +43,6 @@ create table sys_role
 (
     id                      bigint NOT NULL AUTO_INCREMENT COMMENT 'ID',
     name                    varchar(55) COMMENT '角色名称',
-    role_code               varchar(55) COMMENT '角色编码',
     remark                  varchar(100) COMMENT '备注',
     data_scope              tinyint COMMENT '数据范围  0：本人数据  1：全部数据  2：本组织机构及子机构  3：本组织机构  ',
     org_id                  bigint COMMENT '关联的组织机构ID',
