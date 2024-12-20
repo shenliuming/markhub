@@ -12,13 +12,12 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum DataScopeLevel {
 
+    SELF(0), // 仅本人数据权限
     ALL(1), // 全部数据权限
 
-    DEPT_CUSTOM(2), // 指定部门数据权限
-    DEPT_ONLY(3), // 部门数据权限
-    DEPT_AND_CHILD(4), // 部门及以下数据权限
-
-    SELF(5); // 仅本人数据权限
+    ORG_AND_CHILD(2), // 本机构及子机构数据权限
+    ORG_ONLY(3)  // 本机构数据权限
+    ;
 
     /**
      * 范围
