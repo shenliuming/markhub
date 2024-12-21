@@ -20,7 +20,7 @@ public class BaseQuery {
     @NotNull(message = "页码不能为空")
     @Min(value = 1, message = "页码最小值为 1")
     @Schema(description = "当前页码，表示分页查询的起始页", required = true)
-    Integer pageNo;
+    Integer page;
 
     /**
      * 每页显示的记录条数，控制每次查询的数据量

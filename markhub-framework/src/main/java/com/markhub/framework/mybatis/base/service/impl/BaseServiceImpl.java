@@ -41,7 +41,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
      * @param query 分页参数
      */
     protected IPage<T> getPage(BaseQuery query) {
-        Page<T> page = new Page<>(query.getPageNo(), query.getPageSize());
+        Page<T> page = new Page<>(query.getPage(), query.getPageSize());
 
         if (StrUtil.isNotBlank(query.getSortBy())) {
             if (query.isAsc()) {
