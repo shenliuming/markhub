@@ -2,6 +2,7 @@ package com.markhub.system.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.markhub.framework.mybatis.base.service.BaseService;
 import com.markhub.system.entity.SysOrgEntity;
 
 /**
@@ -9,6 +10,6 @@ import com.markhub.system.entity.SysOrgEntity;
  * @Date: 2024/12/21 16:10
  * @Description: 机构Service
  */
-public interface SysOrgService extends IService<SysOrgEntity> {
+public interface SysOrgService extends BaseService<SysOrgEntity> {
 
 }

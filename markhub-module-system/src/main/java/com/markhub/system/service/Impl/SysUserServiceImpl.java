@@ -27,7 +27,6 @@ import java.util.Map;
  * @Description:
  */
 @Service
-@AllArgsConstructor
 public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, SysUserEntity> implements SysUserService {
     @Override
     public PageResult<SysUserVO> page(SysUserQuery query) {

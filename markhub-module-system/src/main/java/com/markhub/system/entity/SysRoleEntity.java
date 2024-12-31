@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
 /**
  * @Auther: emp
  * @Date: 2024/12/31 20:42
- * @Description:
+ * @Description: 权限表
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

@@ -1,6 +1,7 @@
 package com.markhub.system.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.markhub.framework.mybatis.base.service.impl.BaseServiceImpl;
 import com.markhub.system.entity.SysOrgEntity;
 import com.markhub.system.mapper.SysOrgMapper;
 import com.markhub.system.service.SysOrgService;
@@ -12,6 +13,6 @@ import org.springframework.stereotype.Service;
  * @Description: 机构Service实现类
  */
 @Service
-public class SysOrgServiceImpl extends ServiceImpl<SysOrgMapper, SysOrgEntity> implements SysOrgService {
+public class SysOrgServiceImpl extends BaseServiceImpl<SysOrgMapper, SysOrgEntity> implements SysOrgService {
 
 }
