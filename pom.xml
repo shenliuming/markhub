@@ -1,15 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.markhub</groupId>
+    <groupId>net.maku</groupId>
     <artifactId>maku-boot</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
-    <name>markhub</name>
-    <description>
-        This project is based on [Original Project Name] by 阿沐 (babamu@126.com), licensed under Apache License 2.0.
-    </description>
+    <name>maku-boot</name>
+    <description>maku-boot</description>
     <url>https://maku.net</url>
 
     <parent>
@@ -19,10 +17,12 @@
     </parent>
 
     <modules>
-        <module>markhub-boot-system</module>
-        <module>markhub-boot-module</module>
-        <module>markhub-framework</module>
-        <module>markhub-server</module>
+        <module>maku-boot-new</module>
+        <module>maku-boot-system</module>
+        <module>maku-boot-module</module>
+        <module>maku-boot-api</module>
+        <module>maku-framework</module>
+        <module>maku-server</module>
     </modules>
 
     <properties>
