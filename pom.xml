@@ -19,10 +19,8 @@
     </parent>
 
     <modules>
-        <module>maku-boot-new</module>
         <module>maku-boot-system</module>
         <module>maku-boot-module</module>
-        <module>maku-boot-api</module>
         <module>maku-framework</module>
         <module>maku-server</module>
     </modules>
