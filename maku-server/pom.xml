@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>net.maku</groupId>
+        <groupId>com.markhub</groupId>
         <artifactId>maku-boot</artifactId>
         <version>${revision}</version>
     </parent>
@@ -11,42 +11,42 @@
 
     <dependencies>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-boot-system</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-boot-new</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-module-quartz</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-module-generator</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-module-member</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-module-monitor</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>net.maku</groupId>
+            <groupId>com.markhub</groupId>
             <artifactId>maku-module-websocket</artifactId>
             <version>${revision}</version>
         </dependency>
 <!--        <dependency>-->
-<!--            <groupId>net.maku</groupId>-->
+<!--            <groupId>com.markhub</groupId>-->
 <!--            <artifactId>maku-module-iot</artifactId>-->
 <!--            <version>${revision}</version>-->
 <!--        </dependency>-->

@@ -6,7 +6,7 @@ maku-boot 是采用组件模式，扩展不同的业务功能，可以很方便�
 
 ```xml
 <dependency>
-    <groupId>net.maku</groupId>
+    <groupId>com.markhub</groupId>
     <artifactId>maku-boot-quartz</artifactId>
     <version>${revision}</version>
 </dependency>

@@ -1,2 +1,2 @@
 # markhub
-MarkHub is a flexible and scalable development framework designed to streamline the process of building modern, adaptable applications. Inspired by the &amp;quot;Be Water&amp;quot; philosophy, it provides developers with the tools to build, manage, and extend projects with minimal friction.
+This project is based on [Original Project Name] by 阿沐 (babamu@126.com), licensed under Apache License 2.0.
