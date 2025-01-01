@@ -19,10 +19,10 @@
     </parent>
 
     <modules>
-        <module>maku-boot-system</module>
-        <module>maku-boot-module</module>
-        <module>maku-framework</module>
-        <module>maku-server</module>
+        <module>markhub-boot-system</module>
+        <module>markhub-boot-module</module>
+        <module>markhub-framework</module>
+        <module>markhub-server</module>
     </modules>
 
     <properties>
